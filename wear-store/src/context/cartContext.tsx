@@ -6,7 +6,7 @@ interface CartItem {
   price: number;
   quantity: number;
   size: string;
-  image1: string; // Добавлено поле для изображения
+  image1: string;
 }
 
 interface CartContextProps {
