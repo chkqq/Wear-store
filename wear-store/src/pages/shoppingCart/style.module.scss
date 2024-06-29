@@ -1,0 +1,93 @@
+.background
+{
+  background-color: #e0e0e0;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.shoppingCartMainBox
+{
+  margin: 0 20vw 0 20vw;
+  padding: 0 50px;
+  background-color: #fafafa;
+  color: #333333;
+  width: 60vw;
+  min-height: 100vh;
+  overflow: auto;
+
+  .title
+  {
+    padding-top: 80px;
+    font-size: 35px;
+  }
+
+  .emptyCartMessage
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 50px;
+  }
+  .list
+  {
+    margin: 15px;
+    padding: 10px;
+    background-color: #fefefe;
+    border-radius: 5px;
+  }
+
+  .listElement
+  {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    .productImage
+    {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    span
+    {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+    button
+    {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      img
+      {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .deliveryForm
+  {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      .textInput
+      {
+          width: 500px;
+          height: 30px;
+          padding: 10px;
+          font-size: 15px;
+      }
+  }
+}

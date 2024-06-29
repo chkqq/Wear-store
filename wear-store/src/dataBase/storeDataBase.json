@@ -1,0 +1,90 @@
+[
+    {
+        "id": 1,
+        "name": "Rick Owens Drkshdw Hexagram",
+        "price": 150,
+        "image1": "/pics/rick_owens1.png",
+        "image2": "/pics/rick_owens2.png",
+        "image3": "/pics/rick_owens2.png",
+        "image4": "/pics/rick_owens2.png",
+        "description": "Высокие кеды.",
+        "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"]
+    },
+    {
+        "id": 2,
+        "name": "Yohji Yamamoto Blazer",
+        "price": 450,
+        "image1": "/pics/yohji_blazer1.png",
+        "image2": "/pics/yohji_blazer2.png",
+        "image3": "/pics/yohji_blazer3.png",
+        "image4": "/pics/yohji_blazer4.png",
+        "description": "A sharp, oversized black blazer with unique tailoring.",
+        "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+        "id": 3,
+        "name": "Balenciaga Pierced Cap",
+        "price": 320,
+        "image1": "/pics/balenciaga_cap1.png",
+        "image2": "/pics/balenciaga_cap2.png",
+        "image3": "/pics/balenciaga_cap3.png",
+        "image4": "/pics/balenciaga_cap4.png",
+        "description": "Balenciaga Piercing Cap in black cotton drill.",
+        "sizes": ["One size"]
+    },
+    {
+        "id": 4,
+        "name": "Undercover Tee",
+        "price": 220,
+        "image1": "/pics/undercover_tee1.png",
+        "image2": "/pics/undercover_tee2.png",
+        "image3": "/pics/undercover_tee3.png",
+        "image4": "/pics/undercover_tee4.png",
+        "description": "Футболка с прорезями.",
+        "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+        "id": 5,
+        "name": "Vetements Oversized Hoodie",
+        "price": 550,
+        "image1": "/pics/vetements_hoodie1.png",
+        "image2": "/pics/vetements_hoodie2.png",
+        "image3": "/pics/vetements_hoodie3.png",
+        "image4": "/pics/vetements_hoodie4.png",
+        "description": "An oversized hoodie with bold graphics and logos.",
+        "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+        "id": 6,
+        "name": "Maison Margiela Tabi Shoes",
+        "price": 750,
+        "image1": "/pics/margiela_tabi1.png",
+        "image2": "/pics/margiela_tabi2.png",
+        "image3": "/pics/margiela_tabi3.png",
+        "image4": "/pics/margiela_tabi4.png",
+        "description": "Iconic split-toe shoes from Maison Margiela.",
+        "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"]
+    },
+    {
+        "id": 7,
+        "name": "Boris Bidjan Saberi Jeans",
+        "price": 300,
+        "image1": "/pics/boris_pants1.png",
+        "image2": "/pics/boris_pants2.png",
+        "image3": "/pics/boris_pants3.png",
+        "image4": "/pics/boris_pants4.png",
+        "description": "Джинсы средней посадки с низким шаговым швом.",
+        "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+    },
+    {
+        "id": 8,
+        "name": "Rick Owens Vintage High",
+        "price": 150,
+        "image1": "/pics/rick_owens_vintage1.png",
+        "image2": "/pics/rick_owens_vintage2.png",
+        "image3": "/pics/rick_owens_vintage3.png",
+        "image4": "/pics/rick_owens_vintage4.png",
+        "description": "Vintage high-top sneakers with a unique design.",
+        "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"]
+    }
+]
