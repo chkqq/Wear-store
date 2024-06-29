@@ -10,13 +10,13 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ onSubmit }) => {
   const [formData, setFormData] = useState({ name: '', phone: '', email: '', address: '' })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData({ ...formData, [name]: value })
   }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSubmit(formData);
+    e.preventDefault()
+    onSubmit(formData)
   };
 
   return (

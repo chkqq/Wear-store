@@ -1,9 +1,9 @@
 import styles from './style.module.scss'
 import Button from '../../ui/button'
 import ShoppingBagIcon from './icons/shopping-bag.png'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'
 const Header: React.FC = () => {
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     const handleShoppingCartClick = () => {
         navigate('/cart');

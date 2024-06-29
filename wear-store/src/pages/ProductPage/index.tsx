@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import styles from './style.module.scss'
 import Header from '../../widgets/header'
 import { useCartStore } from '../../store/cartStore'
@@ -22,7 +22,8 @@ const ProductPage: React.FC = () => {
   const [product, setProduct] = useState<Product | null>(null)
   const [selectedSize, setSelectedSize] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const { addToCart } = useCartStore();
+  const { addToCart } = useCartStore()
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (id) {
@@ -30,27 +31,30 @@ const ProductPage: React.FC = () => {
         .then(response => response.json())
         .then(data => {
           const foundProduct = data.find((p: Product) => p.id === parseInt(id, 10))
-          setProduct(foundProduct);
+          setProduct(foundProduct)
         })
         .catch(error => console.error('Error loading product:', error))
     }
   }, [id])
 
   const handleSizeSelect = (size: string) => {
-    setSelectedSize(size);
+    setSelectedSize(size)
     setError(null)
   }
 
   const handleAddToCart = () => {
     if (product && selectedSize) {
-      addToCart({ ...product, size: selectedSize });
+      addToCart({ ...product, size: selectedSize })
+      setTimeout(() => {
+        navigate('/')
+      }, 200)
     } else {
       setError('Пожалуйста, выберите размер перед добавлением в корзину!')
     }
   }
 
   if (!product) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>
   }
 
   return (
@@ -85,10 +89,10 @@ const ProductPage: React.FC = () => {
             <Button onClick={handleAddToCart} text='Добавить в корзину' />
           </div>
         </div>
-      {error && <div className={styles.error}>{error}</div>}
+        {error && <div className={styles.error}>{error}</div>}
       </div>
     </div>
   )
 }
 
-export default ProductPage;
+export default ProductPage
