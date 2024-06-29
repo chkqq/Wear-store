@@ -8,7 +8,7 @@
 .shoppingCartMainBox
 {
   margin: 0 20vw 0 20vw;
-  padding: 0 50px;
+  padding: 0 50px 50px 50px;
   background-color: #fafafa;
   color: #333333;
   width: 60vw;
@@ -37,5 +37,12 @@
     padding: 10px;
     background-color: #fefefe;
     border-radius: 5px;
+  }
+  .totalAmount
+  {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-size: 20px;
   }
 }

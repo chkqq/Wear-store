@@ -54,9 +54,9 @@ const ProductPage: React.FC = () => {
   }
 
   return (
-    <div className={styles.main}>
+    <div className={styles.background}>
       <Header />
-      <div className={styles.productPage}>
+      <div className={styles.productPageMainBox}>
         <div className={styles.productImages}>
           <img src={product.image1} alt={product.name} />
           <img src={product.image2} alt={product.name} />

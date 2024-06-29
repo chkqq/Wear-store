@@ -22,6 +22,8 @@ const ShoppingCartPage: React.FC = () => {
     console.log('Form submitted:', formData)
   }
 
+  const totalAmount = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
+
   return (
     <div className={styles.background}>
       <Header />
@@ -48,6 +50,7 @@ const ShoppingCartPage: React.FC = () => {
                />
              ))}
            </div>
+           <p className={styles.totalAmount}>Общая сумма: ${totalAmount}</p>
            <DeliveryForm onSubmit={handleFormSubmit} />
           </div>
         )}

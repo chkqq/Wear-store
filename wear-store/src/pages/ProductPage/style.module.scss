@@ -1,17 +1,18 @@
-.main
+.background
 {
     background-color: #ffffff;
     min-height: 100vh;
     overflow: auto;
 }
 
-.productPage
+.productPageMainBox
 {
   margin-top: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  color: #333333;
   padding: 20px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0));
 

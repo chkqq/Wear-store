@@ -33,7 +33,7 @@ const StorePage: React.FC = () => {
     : products.filter(product => product.category === selectedCategory);
 
   return (
-    <div className={styles.main}>
+    <div className={styles.background}>
       <Header />
       <div className={styles.categoriesBox}>
         <CategoryFilter
