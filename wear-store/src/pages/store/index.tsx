@@ -17,7 +17,7 @@ interface Product {
 
 const StorePage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string>('все');
+  const [selectedCategory, setSelectedCategory] = useState<string>('Все');
 
   useEffect(() => {
     fetch('/src/dataBase/storeDataBase.json')
@@ -28,7 +28,7 @@ const StorePage: React.FC = () => {
 
   const categories = ['Все', 'Верх', 'Низ', 'Обувь', 'Головные уборы'];
 
-  const filteredProducts = selectedCategory === 'все'
+  const filteredProducts = selectedCategory === 'Все'
     ? products
     : products.filter(product => product.category === selectedCategory);
 

@@ -9,7 +9,7 @@
         "image4": "/pics/rick_owens2.png",
         "description": "Высокие кеды.",
         "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"],
-        "category": "обувь"
+        "category": "Обувь"
     },
     {
         "id": 2,
@@ -21,7 +21,7 @@
         "image4": "/pics/yohji_blazer4.png",
         "description": "Шелковый пиджак с графичным принтом.",
         "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-        "category": "верх"
+        "category": "Верх"
     },
     {
         "id": 3,
@@ -33,7 +33,7 @@
         "image4": "/pics/balenciaga_cap4.png",
         "description": "Кепка Balenciaga с металлическими элементами.",
         "sizes": ["One size"],
-        "category": "головные уборы"
+        "category": "Головные уборы"
     },
     {
         "id": 4,
@@ -45,7 +45,7 @@
         "image4": "/pics/undercover_tee4.png",
         "description": "Футболка с прорезями.",
         "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-        "category": "верх"
+        "category": "Верх"
     },
     {
         "id": 5,
@@ -57,7 +57,7 @@
         "image4": "/pics/vetements_hoodie4.png",
         "description": "Худи с логотипом.",
         "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-        "category": "верх"
+        "category": "Верх"
     },
     {
         "id": 6,
@@ -69,7 +69,7 @@
         "image4": "/pics/margiela_tabi4.png",
         "description": "Туфли с таби от Maison Margiela.",
         "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"],
-        "category": "обувь"
+        "category": "Обувь"
     },
     {
         "id": 7,
@@ -81,7 +81,7 @@
         "image4": "/pics/boris_pants4.png",
         "description": "Джинсы средней посадки с низким шаговым швом.",
         "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-        "category": "низ"
+        "category": "Низ"
     },
     {
         "id": 8,
@@ -93,6 +93,6 @@
         "image4": "/pics/rick_owens_vintage4.png",
         "description": "Высокие кожаные кеды.",
         "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"],
-        "category": "обувь"
+        "category": "Обувь"
     }
 ]
