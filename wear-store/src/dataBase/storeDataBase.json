@@ -8,7 +8,8 @@
         "image3": "/pics/rick_owens2.png",
         "image4": "/pics/rick_owens2.png",
         "description": "Высокие кеды.",
-        "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"]
+        "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"],
+        "category": "обувь"
     },
     {
         "id": 2,
@@ -18,8 +19,9 @@
         "image2": "/pics/yohji_blazer2.png",
         "image3": "/pics/yohji_blazer3.png",
         "image4": "/pics/yohji_blazer4.png",
-        "description": "A sharp, oversized black blazer with unique tailoring.",
-        "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+        "description": "Шелковый пиджак с графичным принтом.",
+        "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+        "category": "верх"
     },
     {
         "id": 3,
@@ -29,8 +31,9 @@
         "image2": "/pics/balenciaga_cap2.png",
         "image3": "/pics/balenciaga_cap3.png",
         "image4": "/pics/balenciaga_cap4.png",
-        "description": "Balenciaga Piercing Cap in black cotton drill.",
-        "sizes": ["One size"]
+        "description": "Кепка Balenciaga с металлическими элементами.",
+        "sizes": ["One size"],
+        "category": "головные уборы"
     },
     {
         "id": 4,
@@ -41,7 +44,8 @@
         "image3": "/pics/undercover_tee3.png",
         "image4": "/pics/undercover_tee4.png",
         "description": "Футболка с прорезями.",
-        "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+        "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+        "category": "верх"
     },
     {
         "id": 5,
@@ -51,8 +55,9 @@
         "image2": "/pics/vetements_hoodie2.png",
         "image3": "/pics/vetements_hoodie3.png",
         "image4": "/pics/vetements_hoodie4.png",
-        "description": "An oversized hoodie with bold graphics and logos.",
-        "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+        "description": "Худи с логотипом.",
+        "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+        "category": "верх"
     },
     {
         "id": 6,
@@ -62,8 +67,9 @@
         "image2": "/pics/margiela_tabi2.png",
         "image3": "/pics/margiela_tabi3.png",
         "image4": "/pics/margiela_tabi4.png",
-        "description": "Iconic split-toe shoes from Maison Margiela.",
-        "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"]
+        "description": "Туфли с таби от Maison Margiela.",
+        "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"],
+        "category": "обувь"
     },
     {
         "id": 7,
@@ -74,7 +80,8 @@
         "image3": "/pics/boris_pants3.png",
         "image4": "/pics/boris_pants4.png",
         "description": "Джинсы средней посадки с низким шаговым швом.",
-        "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+        "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+        "category": "низ"
     },
     {
         "id": 8,
@@ -84,7 +91,8 @@
         "image2": "/pics/rick_owens_vintage2.png",
         "image3": "/pics/rick_owens_vintage3.png",
         "image4": "/pics/rick_owens_vintage4.png",
-        "description": "Vintage high-top sneakers with a unique design.",
-        "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"]
+        "description": "Высокие кожаные кеды.",
+        "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"],
+        "category": "обувь"
     }
 ]

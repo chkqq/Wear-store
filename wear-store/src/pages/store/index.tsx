@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import styles from './style.module.scss';
 import Header from '../../widgets/header';
+import ProductCard from '../../widgets/productCard';
+import CategoryFilter from '../../widgets/categoryFilter';
 
 interface Product {
   id: number;
@@ -11,10 +12,12 @@ interface Product {
   image2: string;
   description: string;
   sizes: string[];
+  category: string;
 }
 
 const StorePage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>('все');
 
   useEffect(() => {
     fetch('/src/dataBase/storeDataBase.json')
@@ -23,24 +26,26 @@ const StorePage: React.FC = () => {
       .catch(error => console.error('Error loading products:', error));
   }, []);
 
+  const categories = ['Все', 'Верх', 'Низ', 'Обувь', 'Головные уборы'];
+
+  const filteredProducts = selectedCategory === 'все'
+    ? products
+    : products.filter(product => product.category === selectedCategory);
+
   return (
     <div className={styles.main}>
       <Header />
+      <div className={styles.categoriesBox}>
+        <CategoryFilter
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onSelectCategory={setSelectedCategory}
+        />
+      </div>
       <div className={styles.storeMainBox}>
         <div className={styles.productCardList}>
-          {products.map(product => (
-            <div key={product.id} className={styles.productCard}>
-              <Link to={`/product/${product.id}`} className={styles.productCardLink}>
-                <div className={styles.productCardPicture}>
-                  <img src={product.image1} alt={product.name} className={styles.productCardImage} />
-                  <img src={product.image2} alt={product.name} className={styles.productCardImageHover} />
-                </div>
-                <div className={styles.ProductCardNameAndPriceBox}>
-                  <p className={styles.productCardName}>{product.name}</p>
-                  <p className={styles.productCardPrice}>${product.price}</p>
-                </div>
-              </Link>
-            </div>
+          {filteredProducts.map(product => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </div>

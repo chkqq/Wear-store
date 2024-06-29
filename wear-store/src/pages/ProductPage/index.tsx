@@ -1,49 +1,53 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import styles from './style.module.scss';
-import Header from '../../widgets/header';
-import { useCart } from '../../context/cartContext';
-import Button from '../../ui/button';
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import styles from './style.module.scss'
+import Header from '../../widgets/header'
+import { useCartStore } from '../../store/cartStore'
+import Button from '../../ui/button'
 
 interface Product {
-  id: number;
-  name: string;
-  price: number;
-  image1: string;
-  image2: string;
-  image3: string;
-  image4: string;
-  description: string;
-  sizes: string[];
+  id: number
+  name: string
+  price: number
+  image1: string
+  image2: string
+  image3: string
+  image4: string
+  description: string
+  sizes: string[]
 }
 
 const ProductPage: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
-  const [product, setProduct] = useState<Product | null>(null);
-  const [selectedSize, setSelectedSize] = useState<string | null>(null);
-  const { addToCart } = useCart();
+  const { id } = useParams<{ id: string }>()
+  const [product, setProduct] = useState<Product | null>(null)
+  const [selectedSize, setSelectedSize] = useState<string | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  const { addToCart } = useCartStore();
 
   useEffect(() => {
     if (id) {
       fetch('/src/dataBase/storeDataBase.json')
         .then(response => response.json())
         .then(data => {
-          const foundProduct = data.find((p: Product) => p.id === parseInt(id, 10));
+          const foundProduct = data.find((p: Product) => p.id === parseInt(id, 10))
           setProduct(foundProduct);
         })
-        .catch(error => console.error('Error loading product:', error));
+        .catch(error => console.error('Error loading product:', error))
     }
-  }, [id]);
+  }, [id])
 
   const handleSizeSelect = (size: string) => {
     setSelectedSize(size);
-  };
+    setError(null)
+  }
 
   const handleAddToCart = () => {
     if (product && selectedSize) {
       addToCart({ ...product, size: selectedSize });
+    } else {
+      setError('Пожалуйста, выберите размер перед добавлением в корзину!')
     }
-  };
+  }
 
   if (!product) {
     return <div>Loading...</div>;
@@ -64,7 +68,7 @@ const ProductPage: React.FC = () => {
           <p>{product.description}</p>
           <p>${product.price}</p>
           <div className={styles.sizeSelector}>
-            <p>Select Size:</p>
+            <p>Выберите размер:</p>
             <div className={styles.sizeOptions}>
               {product.sizes.map(size => (
                 <button
@@ -78,12 +82,13 @@ const ProductPage: React.FC = () => {
             </div>
           </div>
           <div className={styles.buttonWrapper}>
-            <Button onClick={handleAddToCart} text='Добавить в корзину'/>
+            <Button onClick={handleAddToCart} text='Добавить в корзину' />
           </div>
         </div>
+      {error && <div className={styles.error}>{error}</div>}
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default ProductPage;
