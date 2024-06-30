@@ -5,8 +5,8 @@
         "price": 150,
         "image1": "/pics/rick_owens1.png",
         "image2": "/pics/rick_owens2.png",
-        "image3": "/pics/rick_owens2.png",
-        "image4": "/pics/rick_owens2.png",
+        "image3": "/pics/rick_owens3.png",
+        "image4": "/pics/rick_owens4.png",
         "description": "Высокие кеды.",
         "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"],
         "category": "Обувь"
