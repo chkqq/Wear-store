@@ -6,8 +6,8 @@ const Header: React.FC = () => {
     const navigate = useNavigate()
 
     const handleShoppingCartClick = () => {
-        navigate('/cart');
-    };
+        navigate('/cart')
+    }
 
     return(
         <div className = {styles.header}>

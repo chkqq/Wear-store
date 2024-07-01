@@ -1,10 +1,10 @@
-import React from 'react';
-import styles from './style.module.scss';
+import React from 'react'
+import styles from './style.module.scss'
 
 interface CategoryFilterProps {
-  categories: string[];
-  selectedCategory: string;
-  onSelectCategory: (category: string) => void;
+  categories: string[]
+  selectedCategory: string
+  onSelectCategory: (category: string) => void
 }
 
 const CategoryFilter: React.FC<CategoryFilterProps> = ({ categories, selectedCategory, onSelectCategory }) => {
@@ -20,7 +20,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ categories, selectedCat
         </button>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default CategoryFilter;
+export default CategoryFilter

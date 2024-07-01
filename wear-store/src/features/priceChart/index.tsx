@@ -1,5 +1,5 @@
 import styles from './style.module.scss'
-import React from 'react';
+import React from 'react'
 import {
   LineChart,
   Line,
@@ -8,15 +8,15 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-} from 'recharts';
+} from 'recharts'
 
 interface PriceData {
-  date: string;
-  price: number;
+  date: string
+  price: number
 }
 
 interface PriceChartProps {
-  data: PriceData[];
+  data: PriceData[]
 }
 
 const PriceChart: React.FC<PriceChartProps> = ({ data }) => {
@@ -32,7 +32,7 @@ const PriceChart: React.FC<PriceChartProps> = ({ data }) => {
           <Line type="monotone" dataKey="price" stroke="#333333" activeDot={{ r: 8 }} />
       </LineChart>
     </div>
-  );
-};
+  )
+}
 
-export default PriceChart;
+export default PriceChart

@@ -1,35 +1,35 @@
-import styles from './style.module.scss';
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import styles from './style.module.scss'
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 interface Review {
-  id: number;
-  rating: number;
-  comment: string;
-  date: string;
+  id: number
+  rating: number
+  comment: string
+  date: string
 }
 
 const Reviews: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
-  const [reviews, setReviews] = useState<Review[]>([]);
-  const [averageRating, setAverageRating] = useState<number | null>(null);
+  const { id } = useParams<{ id: string }>()
+  const [reviews, setReviews] = useState<Review[]>([])
+  const [averageRating, setAverageRating] = useState<number | null>(null)
 
   useEffect(() => {
     if (id) {
       fetch('/src/dataBase/reviewsDataBase.json')
         .then(response => response.json())
         .then(data => {
-          const productReviews = data.find((r: { productId: number }) => r.productId === parseInt(id, 10));
+          const productReviews = data.find((r: { productId: number }) => r.productId === parseInt(id, 10))
           if (productReviews) {
-            setReviews(productReviews.reviews);
-            const totalRating = productReviews.reviews.reduce((sum: number, review: Review) => sum + review.rating, 0);
+            setReviews(productReviews.reviews)
+            const totalRating = productReviews.reviews.reduce((sum: number, review: Review) => sum + review.rating, 0)
             const average = totalRating / productReviews.reviews.length;
-            setAverageRating(average);
+            setAverageRating(average)
           }
         })
-        .catch(error => console.error('Error loading reviews:', error));
+        .catch(error => console.error('Error loading reviews:', error))
     }
-  }, [id]);
+  }, [id])
 
   return (
     <div className={styles.reviewsContainer}>
@@ -60,7 +60,7 @@ const Reviews: React.FC = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Reviews;
+export default Reviews

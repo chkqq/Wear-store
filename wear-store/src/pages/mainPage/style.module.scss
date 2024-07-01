@@ -21,7 +21,7 @@
             -1px 1px 0 #333,
             1px 1px 0 #333;
             background-size: cover;
-            background-image: url('../../../public/pics/sea.gif');
+            background-image: url('/pics/sea.gif');
             width: 70%;
             height: 100%;
         }
@@ -58,16 +58,11 @@
         flex-direction: column;
         margin: 40px 20%;
         width: 60%;
+        gap: 20px;
         h2
         {
           text-align: center;
         }
     }
-
-    .buttonWrap {
-        padding-top: 50px;
-        margin: 0 auto;
-    }
-
 }
 

@@ -1,19 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from './style.module.scss';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import styles from './style.module.scss'
 
 interface Product {
-  id: number;
-  name: string;
-  price: number;
-  image1: string;
-  image2: string;
-  newArrival: boolean;
-  averageRating: number;
+  id: number
+  name: string
+  price: number
+  image1: string
+  image2: string
+  newArrival: boolean
+  averageRating: number
 }
 
 interface ProductCardProps {
-  product: Product;
+  product: Product
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
@@ -34,7 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default ProductCard;
+export default ProductCard

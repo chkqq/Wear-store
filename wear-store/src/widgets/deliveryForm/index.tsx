@@ -1,6 +1,7 @@
 import styles from './style.module.scss'
 import React, { useState } from 'react'
 import Button from '../../ui/button'
+import TextInput from '../../ui/inputText'
 
 interface DeliveryFormProps {
   onSubmit: (formData: { name: string; phone: string; email: string; address: string }) => void
@@ -17,33 +18,29 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ onSubmit }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     onSubmit(formData)
-  };
+  }
 
   return (
     <form className={styles.deliveryForm} onSubmit={handleSubmit}>
-      <input
-        className={styles.textInput}
+      <TextInput
         name="name"
         placeholder="Фамилия Имя Отчество"
         value={formData.name}
         onChange={handleChange}
       />
-      <input
-        className={styles.textInput}
+      <TextInput
         name="phone"
         placeholder="+7 123 456 7890"
         value={formData.phone}
         onChange={handleChange}
       />
-      <input
-        className={styles.textInput}
+      <TextInput
         name="email"
         placeholder="email"
         value={formData.email}
         onChange={handleChange}
       />
-      <input
-        className={styles.textInput}
+      <TextInput
         name="address"
         placeholder="Ваш адрес"
         value={formData.address}
@@ -51,7 +48,7 @@ const DeliveryForm: React.FC<DeliveryFormProps> = ({ onSubmit }) => {
       />
       <Button text="Оплатить" />
     </form>
-  );
-};
+  )
+}
 
 export default DeliveryForm
