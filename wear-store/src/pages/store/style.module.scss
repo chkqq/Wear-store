@@ -1,5 +1,6 @@
 .background
 {
+
     background-color: #e0e0e0;
     min-height: 100vh;
     overflow: auto;
@@ -15,14 +16,5 @@
     min-height: 100vh;
     overflow: auto;
 
-    .productCardList
-    {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-top: 100px;
-        row-gap: 20px;
-        justify-content: space-between;
-        width: 100%;
-    }
+
 }

@@ -11,7 +11,7 @@ const Header: React.FC = () => {
 
     return(
         <div className = {styles.header}>
-        <Link to="/" className={styles.title}>WEAR-SHOP</Link>
+        <Link to="/" className={styles.title}>=WEAR SHOP=</Link>
         <div className= {styles.buttons}>
             <Button icon={ShoppingBagIcon} onClick={handleShoppingCartClick} ></Button>
         </div>

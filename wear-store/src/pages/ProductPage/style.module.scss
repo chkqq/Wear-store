@@ -9,12 +9,19 @@
 {
   margin-top: 60px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   color: #333333;
   padding: 20px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0));
+
+  .productImagesAndBuyForm
+  {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+  }
 
   .productImages
   {
@@ -32,8 +39,11 @@
     }
   }
 
-  .productDetails
+  .productBuyForm
   {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: 600px;
     text-align: center;
 
@@ -74,11 +84,17 @@
     }
   }
 
+  .productDetailsAndPriceHistory
+  {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    padding: 0 15%;
+  }
   .buttonWrapper
   {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
   }
 }
 
