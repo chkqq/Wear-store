@@ -45,7 +45,7 @@ const MainPage: React.FC = () => {
   return (
     <div className={styles.background}>
       <Header />
-      <div className={styles.PhotoSlider}>
+      <div className={styles.gifBox}>
         <div className={styles.gif}>
           <h1>=WEAR SHOP=</h1>
           <h1>Магазин Авангардной одежды</h1>
