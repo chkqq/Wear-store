@@ -33,14 +33,14 @@ const MainPage: React.FC = () => {
     if (!productReviews || productReviews.reviews.length === 0) return 0
     const totalRating = productReviews.reviews.reduce((acc, review) => acc + review.rating, 0)
     return totalRating / productReviews.reviews.length
-  };
+  }
 
   const newArrivals = products
-    .filter(product => product.newArrival)
-    .map(product => ({
-      ...product,
-      averageRating: getAverageRating(product.id),
-    }));
+  .filter(product => product.newArrival)
+  .map(product => ({
+    ...product,
+    averageRating: getAverageRating(product.id),
+  }))
 
   return (
     <div className={styles.background}>

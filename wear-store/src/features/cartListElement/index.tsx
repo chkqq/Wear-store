@@ -20,7 +20,7 @@ const CartListElement: React.FC<CartListElementProps> = ({ id, name, size, quant
       <span>{name} (Размер: {size}, Количество: {quantity}) - ${price * quantity}</span>
       <Button icon={DeleteIcon} onClick={() => onRemove(id, size)} />
     </div>
-  );
-};
+  )
+}
 
 export default CartListElement

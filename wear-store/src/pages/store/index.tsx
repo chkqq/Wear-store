@@ -7,7 +7,7 @@ import { categories } from '../../const/categories'
 const StorePage: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([])
   const [reviews, setReviews] = useState<{ productId: number; reviews: { rating: number }[] }[]>([])
-  const [selectedCategory, setSelectedCategory] = useState<string>('Все')
+  const [selectedCategory, setSelectedCategory] = useState<string>(categories[0])
 
   useEffect(() => {
     fetch('/src/dataBase/storeDataBase.json')
@@ -19,7 +19,7 @@ const StorePage: React.FC = () => {
       .then(response => response.json())
       .then(data => setReviews(data))
       .catch(error => console.error('Error loading reviews:', error))
-  }, []);
+  }, [])
 
 
 
@@ -35,7 +35,7 @@ const StorePage: React.FC = () => {
     averageRating: getAverageRating(product.id),
   }))
 
-  const filteredProducts = selectedCategory === 'Все'
+  const filteredProducts = selectedCategory === categories[0]
     ? productsWithRatings
     : productsWithRatings.filter(product => product.category === selectedCategory);
 

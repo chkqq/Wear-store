@@ -67,7 +67,7 @@ const ProductPage: React.FC = () => {
   const handleSizeSelect = (size: string) => {
     setSelectedSize(size)
     setError(null)
-  };
+  }
 
   const handleAddToCart = () => {
     if (product && selectedSize) {
@@ -78,24 +78,24 @@ const ProductPage: React.FC = () => {
     } else {
       setError('Пожалуйста, выберите размер перед добавлением в корзину!')
     }
-  };
+  }
 
   const handleImageClick = (index: number) => {
     setCurrentImage(index)
     setIsModalOpen(true)
-  };
+  }
 
   const handleNextImage = () => {
     if (product) {
       setCurrentImage((prevIndex) => (prevIndex + 1) % productImages.length)
     }
-  };
+  }
 
   const handlePrevImage = () => {
     if (product) {
       setCurrentImage((prevIndex) => (prevIndex - 1 + productImages.length) % productImages.length)
     }
-  };
+  }
 
   if (!product) {
     return <div>Loading...</div>
